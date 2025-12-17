@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const secretKey = 'RAHASIA123'; // ganti dengan secret key yang aman
+const secretKey = process.env.JWT_SECRET || 'RAHASIA123'; // ganti dengan secret key yang aman
 
 const users = [
   { _id: 1, email: 'test@gmail.com', password: '123456', name: 'Test User' }
